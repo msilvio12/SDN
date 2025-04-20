@@ -1,0 +1,477 @@
+/* Estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Color base */
+body {
+  background-color: #f7f5f0;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Cabecera */
+header {
+  background: linear-gradient(to right, #a30d0d, #850202);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+/* Navegación */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #ffe0cc;
+  padding: 1rem 0;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  margin: 0.5rem 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #ad0505;
+}
+
+/* Menú y tarjetas */
+.menu {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.item {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.item:hover img {
+  transform: scale(1.05);
+}
+
+.item-content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.item-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.item-content button {
+  padding: 0.5rem 1rem;
+  background-color: #ff914d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.item-content button:hover {
+  background-color: #e36f1f;
+  transform: scale(1.05);
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  text-align: center;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  animation: flotarZoom 10s ease-in-out infinite;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes flotarZoom {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.05) translateY(-8px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+}
+
+.modal-contenido {
+  background-color: white;
+  margin: 5% auto;
+  padding: 2rem;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-contenido h3 {
+  margin-bottom: 1rem;
+  color: #e36f1f;
+}
+
+/* Botones de pago */
+#pagar-transferencia, #pagar-tarjeta {
+  padding: 0.7rem 1.2rem;
+  background-color: #ff914d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#pagar-transferencia:hover, #pagar-tarjeta:hover {
+  background-color: #e36f1f;
+  transform: scale(1.05);
+}
+
+/* Carriles de comentarios */
+.comentarios-slider {
+  padding: 3rem 1rem;
+  background-color: #fff8f0;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comentarios-slider h2 {
+  font-size: 2rem;
+  color: #e36f1f;
+  margin-bottom: 1.5rem;
+}
+
+.slider-contenedor {
+  display: flex;
+  gap: 2rem;
+  animation: deslizar 25s linear infinite;
+  justify-content: center;
+  width: max-content;
+}
+
+.comentario {
+  background-color: #ffe0cc;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  white-space: nowrap;
+  font-style: italic;
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.comentario:nth-child(2) { animation-delay: 1s; }
+.comentario:nth-child(3) { animation-delay: 2s; }
+
+@keyframes deslizar {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Estilos de carrito flotante */
+#carrito-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff914d;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999; 
+}
+
+
+#carrito-flotante:hover {
+  transform: scale(1.05);
+}
+
+#finalizar-compra {
+  background-color: #fff;
+  color: #ff914d;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+#finalizar-compra:hover {
+  background-color: #ffe0cc;
+}
+
+/* Modificar la animación de deslizamiento para que sea más lenta */
+@keyframes deslizar {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.slider-contenedor {
+  display: flex;
+  gap: 2rem;
+  animation: deslizar 120s linear infinite; /* 🐢 Animación más lenta */
+  width: max-content;
+}
+
+.slider-contenedor:hover {
+  animation-play-state: paused; /* ✋ Se detiene al pasar el mouse */
+}
+
+/* Estilo común para todos los botones */
+button {
+  padding: 0.6rem 1.2rem;
+  background-color: #ff914d; /* Color de fondo acorde al diseño de la página */
+  color: white; /* Texto blanco */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #e36f1f; /* Color de fondo al pasar el mouse */
+  transform: scale(1.05); /* Efecto de crecimiento suave */
+}
+
+/* Específico para el botón de Finalizar Compra */
+#finalizar-compra {
+  background-color: #0a0a0a;
+}
+
+#finalizar-compra:hover {
+  background-color: #f0ecea;
+}
+
+/* Específico para los botones de Pago (Tarjeta y Transferencia) */
+#pagar-transferencia, #pagar-tarjeta {
+  background-color: #ff914d;
+}
+
+#pagar-transferencia:hover, #pagar-tarjeta:hover {
+  background-color: #e36f1f;
+}
+
+/* Específico para el botón de Confirmar Pago en el formulario */
+#form-tarjeta button {
+  background-color: #ff914d;
+}
+
+#form-tarjeta button:hover {
+  background-color: #e36f1f;
+}
+
+/* Específico para el botón de Cancelar */
+#cerrar-modal {
+  background-color: #cccccc; /* Color gris claro */
+  color: #333; /* Texto oscuro para visibilidad */
+}
+
+#cerrar-modal:hover {
+  background-color: #999999; /* Gris más oscuro al pasar el mouse */
+}
+
+.red-social {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.red-social:hover {
+  transform: scale(1.2);
+}
+
+.video-section {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  height: 100vh;           /* Asegura que ocupe toda la altura de la pantalla */
+  flex-direction: column;  /* Asegura que los elementos estén en columna (título + video) */
+  text-align: center;      /* Centra el texto dentro de la sección */
+}
+
+video {
+  max-width: 100%;         /* Hace que el video sea responsive y no se desborde */
+  height: auto;            /* Mantiene la relación de aspecto */
+  border-radius: 10px;     /* Si quieres bordes redondeados */
+}
+
+/* Estilo para el chat flotante */
+.chat-bot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.chat-bot button {
+  background-color: #25D366; /* Color verde (puedes cambiarlo) */
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.chat-box {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.chat-header {
+  background-color: #4CAF50;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-content {
+  padding: 10px;
+  height: 300px;
+  overflow-y: auto;
+}
+
+#chat-input {
+  padding: 10px;
+  width: calc(100% - 20px);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Estilo para el chat flotante en el lado izquierdo */
+.chat-bot {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.chat-box {
+  position: fixed;
+  bottom: 80px;
+  left: 20px;           /* Alineado a la izquierda */
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
