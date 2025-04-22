@@ -171,3 +171,14 @@ function sendMessage() {
     }, 1500);
   }
 }
+  document.getElementById("pagar-tarjeta").addEventListener("click", function () {
+  document.getElementById("formulario-tarjeta").style.display = "block";
+  document.getElementById("formulario-tarjeta").scrollIntoView({ behavior: "smooth" });
+});
+
+  document.getElementById("form-tarjeta").addEventListener("submit", function (event) {
+  event.preventDefault();
+  const mensaje = document.getElementById("mensaje-aprobado");
+  mensaje.style.display = "block";
+  mensaje.scrollIntoView({ behavior: "smooth" });
+});
