@@ -182,3 +182,5 @@ function sendMessage() {
   mensaje.style.display = "block";
   mensaje.scrollIntoView({ behavior: "smooth" });
 });
+
+
