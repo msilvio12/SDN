@@ -50,23 +50,27 @@
   </div>
 
   <!-- Modal de pago solo con transferencia -->
-  <div id="modal-pago" class="modal" style="display:none;">
-    <div class="modal-contenido">
-      <h3>Realizar Transferencia</h3>
-      <div id="resumen-carrito" style="text-align: left; margin: 1rem 0;"></div>
-      <p>Total de tu pedido: <strong>$<span id="modal-total">0</span></strong></p>
+<div id="modal-pago" class="modal" style="display:none;">
+  <div class="modal-contenido">
+    <h3>Realizar Transferencia</h3>
 
-      <label for="monto-transferencia"><strong>Ingresá el monto:</strong></label>
-      <input type="number" id="monto-transferencia" placeholder="Ej: 12500" class="form-control mb-3">
+    <!-- Mostrar alias -->
+    <p><strong>Alias para transferir:</strong> <span style="color: #d35400;">saboresdelnorte.salta</span></p>
 
-      <button id="btn-pagar-transferencia" class="btn btn-success">Pagar</button>
-      <button id="cerrar-modal" class="btn btn-secondary mt-2">Cancelar</button>
+    <div id="resumen-carrito" style="text-align: left; margin: 1rem 0;"></div>
+    <p>Total de tu pedido: <strong>$<span id="modal-total">0</span></strong></p>
 
-      <div id="mensaje-exito" style="display: none; margin-top: 1rem; text-align: center; font-weight: bold; font-size: 1.1rem; color: green;">
-        ✅ ¡Pago exitoso! 👍
-      </div>
+    <label for="monto-transferencia"><strong>Ingresá el monto:</strong></label>
+    <input type="number" id="monto-transferencia" placeholder="Ej: 12500" class="form-control mb-3">
+
+    <button id="btn-pagar-transferencia" class="btn btn-success">Pagar</button>
+    <button id="cerrar-modal" class="btn btn-secondary mt-2">Cancelar</button>
+
+    <div id="mensaje-exito" style="display: none; margin-top: 1rem; text-align: center; font-weight: bold; font-size: 1.1rem; color: green;">
+      ✅ ¡Pago exitoso! 👍
     </div>
   </div>
+</div>
  
   
   
