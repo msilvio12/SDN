@@ -462,7 +462,7 @@ button:hover {
 .chat-box {
   position: fixed;
   bottom: 80px;
-  left: 20px;           /* Alineado a la izquierda */
+  left: 20px;          
   width: 300px;
   height: 400px;
   background-color: #fff;
