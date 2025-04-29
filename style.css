@@ -500,3 +500,33 @@ h1.encabezado-principal { color: #ff914d; }
   position: relative;
   z-index: 2;
 }
+
+.accordion-btn {
+  background-color: #111;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-btn:hover {
+  background-color: #333;
+}
+
+.accordion-content {
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.accordion-content p {
+  margin: 0;
+  padding: 0.5rem 0;
+  color: #333;
+}

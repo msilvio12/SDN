@@ -182,5 +182,15 @@ function sendMessage() {
   mensaje.style.display = "block";
   mensaje.scrollIntoView({ behavior: "smooth" });
 });
+//botones de "sobre nosotros" ,"politica de privacidad..."
 
-
+function toggleContent(id) {
+  const content = document.getElementById(id);
+  if (content.style.display === 'block') {
+    content.style.display = 'none';
+  } else {
+    // Ocultar los otros contenidos
+    document.querySelectorAll('.accordion-content').forEach(el => el.style.display = 'none');
+    content.style.display = 'block';
+  }
+}

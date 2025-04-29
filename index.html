@@ -410,26 +410,34 @@
 </div>
 
 
-<!-- Footer legal -->
-<footer id="contacto" style="text-align: center; padding: 2rem; background-color:#111110">
-  <p style="color: white;">&copy; 2025 Sabores del Norte. Todos los derechos reservados.</p>
-</footer>
+<!-- Sección informativa con diseño moderno -->
+<div style="background-color: #f0f0f0; padding: 2rem 1rem; text-align: center; margin-top: 2rem;">
+  <div style="max-width: 800px; margin: auto;">
+    <!-- Botones desplegables -->
+    <button class="accordion-btn" onclick="toggleContent('sobre-nosotros')">Sobre nosotros</button>
+    <div id="sobre-nosotros" class="accordion-content">
+      <p>Sabores del Norte es un emprendimiento familiar dedicado a compartir lo mejor de la gastronomía regional del norte argentino, con recetas auténticas y productos caseros.</p>
+    </div>
 
-<!-- Footer con redes sociales -->
-<footer style="text-align: center; padding: 2rem; background-color: #f8f4f4; margin-top: 2rem;">
-  <p style="margin-bottom: 1rem;">Seguinos en nuestras redes:</p>
-  <div style="display: flex; justify-content: center; gap: 2rem;">
-    <a href="https://wa.me/549XXXXXXXXXX" target="_blank">
-      <img src="img/whatsapp.png" alt="WhatsApp" class="red-social" style="width: 30px; height: 30px;">
-    </a>
-    <a href="https://instagram.com/tuusuario" target="_blank">
-      <img src="img/instagram.png" alt="Instagram" class="red-social" style="width: 30px; height: 30px;">
-    </a>
-    <a href="https://facebook.com/tuusuario" target="_blank">
-      <img src="img/facebook.png" alt="Facebook" class="red-social" style="width: 30px; height: 30px;">
-    </a>
+    <button class="accordion-btn" onclick="toggleContent('politicas')">Políticas de privacidad</button>
+    <div id="politicas" class="accordion-content">
+      <p>Respetamos tu privacidad. No compartimos tus datos personales con terceros sin tu consentimiento. Toda la información se maneja de forma segura.</p>
+    </div>
+
+    <button class="accordion-btn" onclick="toggleContent('terminos')">Términos y condiciones</button>
+    <div id="terminos" class="accordion-content">
+      <p>Al utilizar nuestro sitio y servicios, aceptás nuestros términos de uso, incluyendo las condiciones de compra, envíos y devoluciones.</p>
+    </div>
+
+    <!-- App -->
+    <div style="margin-top: 2rem;">
+      <p style="margin-bottom: 0.5rem;">Descargá nuestra app:</p>
+      <a href="https://play.google.com/store" target="_blank">
+        <img src="img/google-play.png" alt="Descargar en Google Play" style="width: 150px;">
+      </a>
+    </div>
   </div>
-</footer>
+</div>
 
 
 <!-- Font Awesome (esto va antes del cierre de </body>) -->
