@@ -71,7 +71,11 @@ function mostrarContacto() {
 
 // Dropdown especialidades
 const comidas = {
+  
   asado: { nombre: "Parrillada", precio: 15000, imagen: "img/asado.jpg" },
+  empanadas:{nombre:"Empanadas", precio: 8000, imagen:"img/empanadas.jpg"},
+  locro:{nombre:"Locro", precio: 3500,imagen:"img/locro.jpg"},
+  humitas:{nombre:"Humitas", precio: 8000, imagen:"img/humitas.jpg"},
   tamales: { nombre: "Tamales", precio: 3800, imagen: "img/tamales.jpg" },
   milanesas: { nombre: "Milanesas", precio: 3200, imagen: "img/milanesa.jpg" },
   pizza: { nombre: "Pizza", precio: 2900, imagen: "img/pizza.jpg" },
