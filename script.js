@@ -198,3 +198,7 @@ function toggleContent(id) {
     content.style.display = 'block';
   }
 }
+//Mensaje en el boton de transferencias
+document.getElementById("pagar-transferencia").addEventListener("click", function () {
+  alert("📦 El método de transferencia lo encontrás al finalizar la compra con el carrito.");
+});
