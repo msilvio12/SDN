@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
   <!--Estilo CSS-->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header class="portada text-white text-center d-flex flex-column justify-content-center align-items-center">
     <div class="overlay"></div>
@@ -19,9 +21,9 @@
       <p id="frase-dinamica"></p>
     </div>
   </header>
-  
-  
-  
+
+
+
   <nav>
     <a href="#menu">Menú</a>
     <a href="#videos">Videos</a>
@@ -41,7 +43,7 @@
         <a href="#matambre">Matambre</a>
       </div>
     </div>
-</nav>
+  </nav>
 
 
   <!--Carrito Flotante para finalizar compra-->
@@ -51,64 +53,66 @@
     <button id="finalizar-compra" class="btn btn-warning">Finalizar compra</button>
   </div>
 
-  
 
- <!-- Modal de pago -->
- <div id="modal-pago" class="modal" style="display:none;">
-  <div class="modal-contenido">
-    <h3>Realizar Transferencia</h3>
-    <p><strong>Alias para transferir:</strong> <span style="color: #d35400;">saboresdelnorte.salta</span></p>
-    <div id="resumen-carrito" style="text-align: left; margin: 1rem 0;"></div>
-    <p>Total de tu pedido: <strong>$<span id="modal-total">0</span></strong></p>
 
-    <label for="monto-transferencia"><strong>Ingresá el monto:</strong></label>
-    <input type="number" id="monto-transferencia" placeholder="Ej: 12500" class="form-control mb-3">
+  <!-- Modal de pago -->
+  <div id="modal-pago" class="modal" style="display:none;">
+    <div class="modal-contenido">
+      <h3>Realizar Transferencia</h3>
+      <p><strong>Alias para transferir:</strong> <span style="color: #d35400;">saboresdelnorte.salta</span></p>
+      <div id="resumen-carrito" style="text-align: left; margin: 1rem 0;"></div>
+      <p>Total de tu pedido: <strong>$<span id="modal-total">0</span></strong></p>
 
-    <!-- Sección para subir comprobante -->
-    <div class="mb-3">
-      <label for="comprobante-transferencia" class="form-label">Subí el comprobante de la transferencia (imagen o PDF):</label>
-      <input type="file" class="form-control" id="comprobante-transferencia" accept="image/*,.pdf">
-      <div id="mensaje-comprobante" class="mt-2 text-success fw-bold" style="display: none;">✅ ¡Comprobante enviado con éxito!</div>
-    </div>
+      <label for="monto-transferencia"><strong>Ingresá el monto:</strong></label>
+      <input type="number" id="monto-transferencia" placeholder="Ej: 12500" class="form-control mb-3">
 
-    <button id="btn-pagar-transferencia" class="btn btn-success">Pagar</button>
-    <button id="cerrar-modal" class="btn btn-secondary mt-2">Cancelar</button>
+      <!-- Sección para subir comprobante -->
+      <div class="mb-3">
+        <label for="comprobante-transferencia" class="form-label">Subí el comprobante de la transferencia (imagen o
+          PDF):</label>
+        <input type="file" class="form-control" id="comprobante-transferencia" accept="image/*,.pdf">
+        <div id="mensaje-comprobante" class="mt-2 text-success fw-bold" style="display: none;">✅ ¡Comprobante enviado
+          con éxito!</div>
+      </div>
 
-    <div id="mensaje-exito" style="display: none; margin-top: 1rem; text-align: center; font-weight: bold; font-size: 1.1rem; color: green;">
-      ✅ ¡Pago exitoso! 👍
-    </div>
-  </div>
-</div>
- 
+      <button id="btn-pagar-transferencia" class="btn btn-success">Pagar</button>
+      <button id="cerrar-modal" class="btn btn-secondary mt-2">Cancelar</button>
 
-  
-  
-<!-- Modal de elección de método de pago -->
-
-<div id="modal-pago" class="modal">
-  <div class="modal-contenido">
-    <h3>¿Cómo querés pagar tu compra?</h3>
-    <div id="resumen-carrito" style="text-align: left; margin: 1rem 0;"></div>
-
-    <p style="text-align:center;">Total de tu pedido: <strong>$<span id="modal-total">0</span></strong></p>
-
-    <div style="text-align:center;">
-      <button id="pago-tarjeta-modal">💳 Tarjeta</button>
-      <button id="pago-transferencia-modal">💸 Transferencia</button>
-      <button id="cerrar-modal" class="cerrar">Cancelar</button>
+      <div id="mensaje-exito"
+        style="display: none; margin-top: 1rem; text-align: center; font-weight: bold; font-size: 1.1rem; color: green;">
+        ✅ ¡Pago exitoso! 👍
+      </div>
     </div>
   </div>
-</div>
 
 
-  
+
+  <!-- Modal de elección de método de pago -->
+
+  <div id="modal-pago" class="modal">
+    <div class="modal-contenido">
+      <h3>¿Cómo querés pagar tu compra?</h3>
+      <div id="resumen-carrito" style="text-align: left; margin: 1rem 0;"></div>
+
+      <p style="text-align:center;">Total de tu pedido: <strong>$<span id="modal-total">0</span></strong></p>
+
+      <div style="text-align:center;">
+        <button id="pago-tarjeta-modal">💳 Tarjeta</button>
+        <button id="pago-transferencia-modal">💸 Transferencia</button>
+        <button id="cerrar-modal" class="cerrar">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+
+
 
   <!--Banner de presentación-->
 
   <section class="hero">
     <img src="img/Banner.png" alt="Banner de comidas" style="cursor: pointer;" onclick="location.reload()">
   </section>
-  
+
   <section id="menu" class="menu">
     <div class="item">
       <img src="img/locro.jpg" alt="Locro">
@@ -118,7 +122,7 @@
         <button class="agregar-carrito" data-precio="3500">Agregar al carrito</button>
       </div>
     </div>
-  
+
     <div class="item">
       <img src="img/humitas.jpg" alt="Humita">
       <div class="item-content">
@@ -127,7 +131,7 @@
         <button class="agregar-carrito" data-precio="8000">Agregar al carrito</button>
       </div>
     </div>
-  
+
     <div class="item">
       <img src="img/empanadas.jpg" alt="Empanadas">
       <div class="item-content">
@@ -139,11 +143,11 @@
           <option value="Jamón y Queso">Jamón y Queso</option>
           <option value="Capresse">Capresse</option>
         </select>
-        
+
         <button class="agregar-carrito" data-precio="8000">Agregar al carrito</button>
       </div>
     </div>
-  
+
     <div class="item">
       <img src="img/pizza.jpg" alt="Pizza">
       <div class="item-content">
@@ -155,11 +159,11 @@
           <option value="Napolitana">Napolitana</option>
           <option value="Fugazzeta">Fugazzeta</option>
         </select>
-        
+
         <button class="agregar-carrito" data-precio="2900">Agregar al carrito</button>
       </div>
     </div>
-  
+
     <div class="item">
       <img src="img/asado.jpg" alt="Asado">
       <div class="item-content">
@@ -168,7 +172,7 @@
         <button class="agregar-carrito" data-precio="15000">Agregar al carrito</button>
       </div>
     </div>
-  
+
     <div class="item">
       <img src="img/tamales.jpg" alt="Tamales">
       <div class="item-content">
@@ -185,7 +189,7 @@
         <button class="agregar-carrito" data-precio="5500">Agregar al carrito</button>
       </div>
     </div>
-  
+
     <div class="item">
       <img src="img/cervezas.jpg" alt="Cerveza">
       <div class="item-content">
@@ -198,11 +202,11 @@
           <option value="Imperial">Imperial</option>
           <option value="Quilmes">Quilmes</option>
         </select>
-        
+
         <button class="agregar-carrito" data-precio="2000">Agregar al carrito</button>
       </div>
     </div>
-  
+
     <div class="item">
       <img src="img/vinos.jpg" alt="Vino">
       <div class="item-content">
@@ -217,7 +221,7 @@
         <button class="agregar-carrito" data-precio="4500">Agregar al carrito</button>
       </div>
     </div>
-  
+
     <div class="item">
       <img src="img\gaseosas.jpg" alt="Gaseosa">
       <div class="item-content">
@@ -234,7 +238,7 @@
         <button class="agregar-carrito" data-precio="1500">Agregar al carrito</button>
       </div>
     </div>
-  
+
     <div class="item">
       <img src="img\dulcedecayoteconnuez.jpg" alt="Dulce de cayote con nueces">
       <div class="item-content">
@@ -243,7 +247,7 @@
         <button class="agregar-carrito" data-precio="3000">Agregar al carrito</button>
       </div>
     </div>
-  
+
     <div class="item">
       <img src="img\helado.jpg" alt="Helado">
       <div class="item-content">
@@ -261,7 +265,7 @@
         <button class="agregar-carrito" data-precio="2500">Agregar al carrito</button>
       </div>
     </div>
-  
+
     <div class="item">
       <img src="img\turronsalteño.jpg" alt="Turrón salteño">
       <div class="item-content">
@@ -270,9 +274,9 @@
         <button class="agregar-carrito" data-precio="3200">Agregar al carrito</button>
       </div>
     </div>
-  
+
   </section>
-  
+
   <section id="videos" class="video-section">
     <h2>Conocé Sabores del Norte</h2>
     <video width="560" height="315" controls autoplay muted>
@@ -282,24 +286,24 @@
   </section>
 
   <!-- Botón del chat flotante -->
-<div id="chat-bot" class="chat-bot">
-  <button onclick="toggleChat()">🗨️ Chat</button>
-</div>
-
-<!-- Ventana de chat -->
-<div id="chat-box" class="chat-box">
-  <div class="chat-header">
-    <h3>Sabores del Norte</h3>
-    <span onclick="toggleChat()" class="close-btn">❌</span>
+  <div id="chat-bot" class="chat-bot">
+    <button onclick="toggleChat()">🗨️ Chat</button>
   </div>
-  <div class="chat-content">
-    <p>¡Hola! ¿En qué puedo ayudarte? 🍽️</p>    
-  </div>
-  <input type="text" placeholder="Escribe tu mensaje..." id="chat-input">
-  <button onclick="sendMessage()">Enviar</button>
-</div>
 
-  
+  <!-- Ventana de chat -->
+  <div id="chat-box" class="chat-box">
+    <div class="chat-header">
+      <h3>Sabores del Norte</h3>
+      <span onclick="toggleChat()" class="close-btn">❌</span>
+    </div>
+    <div class="chat-content">
+      <p>¡Hola! ¿En qué puedo ayudarte? 🍽️</p>
+    </div>
+    <input type="text" placeholder="Escribe tu mensaje..." id="chat-input">
+    <button onclick="sendMessage()">Enviar</button>
+  </div>
+
+
   <!-- 🗨️ Sección de Comentarios con 5 usuarios -->
   <section class="comentarios-slider">
     <h2>Lo que dicen nuestros clientes</h2>
@@ -311,24 +315,24 @@
       <div class="comentario">“Muy buena presentación de los platos. Volveré a pedir.” – Valentina</div>
     </div>
   </section>
-  
 
 
-<!-- Sección de métodos de pago -->
 
-<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-  <button id="pagar-transferencia" style="padding: 0.5rem 1rem; display: flex; align-items: center; gap: 0.5rem;">
-    <img src="img\transferencia-de-dinero.png" alt="Mercado Pago" width="40" height="40">
-    Transferencias
-  </button>
+  <!-- Sección de métodos de pago -->
 
-  <button id="pagar-tarjeta" style="padding: 0.5rem 1rem; display: flex; align-items: center; gap: 0.5rem;">
-    <img src="img\visa.png" alt="Visa" width="40" height="40">
-    <img src="img\mastercard.png" alt="Mastercard" width="40" height="40">
-    <img src="img\naranjax.png" alt="Naranja" width="40" height="40">
-    Tarjetas
-  </button>
-</div>
+  <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+    <button id="pagar-transferencia" style="padding: 0.5rem 1rem; display: flex; align-items: center; gap: 0.5rem;">
+      <img src="img\transferencia-de-dinero.png" alt="Mercado Pago" width="40" height="40">
+      Transferencias
+    </button>
+
+    <button id="pagar-tarjeta" style="padding: 0.5rem 1rem; display: flex; align-items: center; gap: 0.5rem;">
+      <img src="img\visa.png" alt="Visa" width="40" height="40">
+      <img src="img\mastercard.png" alt="Mastercard" width="40" height="40">
+      <img src="img\naranjax.png" alt="Naranja" width="40" height="40">
+      Tarjetas
+    </button>
+  </div>
 
 
 
@@ -347,8 +351,9 @@
 
       <button type="submit" class="btn btn-success">Confirmar Pago</button>
     </form>
-  
-    <div id="mensaje-aprobado" style="display: none; margin-top: 1rem; text-align: center; font-weight: bold; color: green;">
+
+    <div id="mensaje-aprobado"
+      style="display: none; margin-top: 1rem; text-align: center; font-weight: bold; color: green;">
       ✅ ¡Tu pago fue aprobado!
     </div>
   </div>
@@ -357,131 +362,130 @@
   <div id="mensaje-pago" style="display: none; text-align: center; margin-top: 1rem;">
     <p id="mensaje"></p>
   </div>
-</section>
+  </section>
 
 
-<div id="contador-local" style="text-align: center; margin-top: 2rem;">
-  <p><strong>👁️ Visitas al sitio:</strong> <span id="visitas">0</span></p>
-</div>
-
-<section id="especialidades" style="padding: 2rem;">
-  <div id="detalle-comida" class="menu" style="display: none;">
-   
+  <div id="contador-local" style="text-align: center; margin-top: 2rem;">
+    <p><strong>👁️ Visitas al sitio:</strong> <span id="visitas">0</span></p>
   </div>
-</section>
 
-<!-- Código QR de pago -->
-<footer id="contacto" style="text-align: center; padding: 2rem; background-color: #1b1914;">
-  <p style="margin-top: 1rem; color: white;">Escaneá este código QR para conocer más sobre nosotros:</p>
-  <img src="img\qr_menu_sabores.png" alt="QR Sabores del Norte" 
-   style="width: 130px; margin-top: 0.5rem; border-radius: 12px;">
-</footer>
+  <section id="especialidades" style="padding: 2rem;">
+    <div id="detalle-comida" class="menu" style="display: none;">
 
-<!-- Modal de elección de método de pago -->
-<div id="modal-pago" class="modal">
-  <div class="modal-contenido">
-    <h3>¿Cómo querés pagar tu compra?</h3>
-    
-    <div id="resumen-carrito"></div>
-    <p>Total de tu pedido: <strong>$<span id="modal-total">0</span></strong></p>
+    </div>
+  </section>
 
-    <button id="pago-tarjeta-modal">💳 Tarjeta</button>
-    <button id="pago-transferencia-modal">💸 Transferencia</button>
-    <button id="cerrar-modal" class="cerrar">Cancelar</button>
+  <!-- Código QR de pago -->
+  <footer id="contacto" style="text-align: center; padding: 2rem; background-color: #1b1914;">
+    <p style="margin-top: 1rem; color: white;">Escaneá este código QR para conocer más sobre nosotros:</p>
+    <img src="img\qr_menu_sabores.png" alt="QR Sabores del Norte"
+      style="width: 130px; margin-top: 0.5rem; border-radius: 12px;">
+  </footer>
 
-    <!-- 🏦 Transferencia - Sección oculta -->
-    <div id="transferencia-form" style="display: none; margin-top: 1.5rem;">
-      <label for="monto-transferencia"><strong>Ingresá el monto:</strong></label><br>
-      <input type="number" id="monto-transferencia" placeholder="Ej: 12500" style="padding: 0.5rem; width: 100%; margin: 0.5rem 0;"><br>
-      <button id="btn-pagar-transferencia">Pagar</button>
+  <!-- Modal de elección de método de pago -->
+  <div id="modal-pago" class="modal">
+    <div class="modal-contenido">
+      <h3>¿Cómo querés pagar tu compra?</h3>
 
-      <!-- Barra de carga -->
-      <div id="barra-carga" style="display:none; width: 100%; background: #ccc; margin-top: 1rem; border-radius: 8px;">
-        <div id="progreso" style="width: 0%; background: #4caf50; color: white; text-align: center; padding: 5px 0; border-radius: 8px;">0%</div>
+      <div id="resumen-carrito"></div>
+      <p>Total de tu pedido: <strong>$<span id="modal-total">0</span></strong></p>
+
+      <button id="pago-tarjeta-modal">💳 Tarjeta</button>
+      <button id="pago-transferencia-modal">💸 Transferencia</button>
+      <button id="cerrar-modal" class="cerrar">Cancelar</button>
+
+      <!-- 🏦 Transferencia - Sección oculta -->
+      <div id="transferencia-form" style="display: none; margin-top: 1.5rem;">
+        <label for="monto-transferencia"><strong>Ingresá el monto:</strong></label><br>
+        <input type="number" id="monto-transferencia" placeholder="Ej: 12500"
+          style="padding: 0.5rem; width: 100%; margin: 0.5rem 0;"><br>
+        <button id="btn-pagar-transferencia">Pagar</button>
+
+        <!-- Barra de carga -->
+        <div id="barra-carga"
+          style="display:none; width: 100%; background: #ccc; margin-top: 1rem; border-radius: 8px;">
+          <div id="progreso"
+            style="width: 0%; background: #4caf50; color: white; text-align: center; padding: 5px 0; border-radius: 8px;">
+            0%</div>
+        </div>
+
+        <!-- Mensaje de pago -->
+        <div id="mensaje-exito"
+          style="display: none; margin-top: 1rem; text-align: center; font-weight: bold; font-size: 1.1rem; color: green;">
+          ✅ ¡Pago exitoso! 👍
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+
+  <!-- Sección informativa con diseño moderno -->
+  <div style="background-color: #f0f0f0; padding: 2rem 1rem; text-align: center; margin-top: 2rem;">
+    <div style="max-width: 800px; margin: auto;">
+      <!-- Botones desplegables -->
+      <button class="accordion-btn" onclick="toggleContent('sobre-nosotros')">Sobre nosotros</button>
+      <div id="sobre-nosotros" class="accordion-content">
+        <p>Sabores del Norte es un emprendimiento familiar dedicado a compartir lo mejor de la gastronomía regional del
+          norte argentino, con recetas auténticas y productos caseros.</p>
       </div>
 
-      <!-- Mensaje de pago -->
-      <div id="mensaje-exito" style="display: none; margin-top: 1rem; text-align: center; font-weight: bold; font-size: 1.1rem; color: green;">
-        ✅ ¡Pago exitoso! 👍
+      <button class="accordion-btn" onclick="toggleContent('politicas')">Políticas de privacidad</button>
+      <div id="politicas" class="accordion-content">
+        <p>Respetamos tu privacidad. No compartimos tus datos personales con terceros sin tu consentimiento. Toda la
+          información se maneja de forma segura.</p>
+      </div>
+
+      <button class="accordion-btn" onclick="toggleContent('terminos')">Términos y condiciones</button>
+      <div id="terminos" class="accordion-content">
+        <p>Al utilizar nuestro sitio y servicios, aceptás nuestros términos de uso, incluyendo las condiciones de
+          compra, envíos y devoluciones.</p>
+      </div>
+
+      <!-- App -->
+      <div style="margin-top: 2rem;">
+        <p style="margin-bottom: 0.5rem;">Descargá nuestra app:</p>
+        <a href="https://play.google.com/store" target="_blank">
+          <img src="img/google-play.png" alt="Descargar en Google Play" style="width: 150px;">
+        </a>
       </div>
     </div>
   </div>
-</div>
-
-</div>
 
 
-<!-- Sección informativa con diseño moderno -->
-<div style="background-color: #f0f0f0; padding: 2rem 1rem; text-align: center; margin-top: 2rem;">
-  <div style="max-width: 800px; margin: auto;">
-    <!-- Botones desplegables -->
-    <button class="accordion-btn" onclick="toggleContent('sobre-nosotros')">Sobre nosotros</button>
-    <div id="sobre-nosotros" class="accordion-content">
-      <p>Sabores del Norte es un emprendimiento familiar dedicado a compartir lo mejor de la gastronomía regional del norte argentino, con recetas auténticas y productos caseros.</p>
+  <!-- Font Awesome (esto va antes del cierre de </body>) -->
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+
+  </footer>
+
+
+
+
+  <!-- Apartado oculto que se muestra al hacer clic en 'Contacto' -->
+  <section id="info-contacto" style="display: none; text-align: center; padding: 2rem; background-color: #fff8f0;">
+    <h2>📍 Contacto</h2>
+    <p><strong>Teléfono:</strong> (0387) 456-7890</p>
+    <p><strong>Dirección:</strong> Calle Córdoba 46, Salta Capital</p>
+    <div style="margin-top: 1rem;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.5352271556786!2d-65.40920882567766!3d-26.827443990072464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc382a1e401e9%3A0xbbd57335d3c63567!2sC%C3%B3rdoba%2046%2C%20A4402%20Salta!5e0!3m2!1ses-419!2sar!4v1713285307203!5m2!1ses-419!2sar"
+        width="100%" height="300" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
-
-    <button class="accordion-btn" onclick="toggleContent('politicas')">Políticas de privacidad</button>
-    <div id="politicas" class="accordion-content">
-      <p>Respetamos tu privacidad. No compartimos tus datos personales con terceros sin tu consentimiento. Toda la información se maneja de forma segura.</p>
-    </div>
-
-    <button class="accordion-btn" onclick="toggleContent('terminos')">Términos y condiciones</button>
-    <div id="terminos" class="accordion-content">
-      <p>Al utilizar nuestro sitio y servicios, aceptás nuestros términos de uso, incluyendo las condiciones de compra, envíos y devoluciones.</p>
-    </div>
-
-    <!-- App -->
-    <div style="margin-top: 2rem;">
-      <p style="margin-bottom: 0.5rem;">Descargá nuestra app:</p>
-      <a href="https://play.google.com/store" target="_blank">
-        <img src="img/google-play.png" alt="Descargar en Google Play" style="width: 150px;">
-      </a>
-    </div>
-  </div>
-</div>
-
-
-<!-- Font Awesome (esto va antes del cierre de </body>) -->
-<script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
-
-</footer>
+  </section>
 
 
 
 
-<!-- Apartado oculto que se muestra al hacer clic en 'Contacto' -->
-<section id="info-contacto" style="display: none; text-align: center; padding: 2rem; background-color: #fff8f0;">
-  <h2>📍 Contacto</h2>
-  <p><strong>Teléfono:</strong> (0387) 456-7890</p>
-  <p><strong>Dirección:</strong> Calle Córdoba 46, Salta Capital</p>
-  <div style="margin-top: 1rem;">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.5352271556786!2d-65.40920882567766!3d-26.827443990072464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc382a1e401e9%3A0xbbd57335d3c63567!2sC%C3%B3rdoba%2046%2C%20A4402%20Salta!5e0!3m2!1ses-419!2sar!4v1713285307203!5m2!1ses-419!2sar" 
-      width="100%" 
-      height="300" 
-      style="border:0; border-radius: 8px;" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
-</section>
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
 
-
-<!-- Bootstrap JS Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
-<!-- 🔗 JavaScript externo -->
-<script src="script.js"></script>
+  <!-- 🔗 JavaScript externo -->
+  <script src="script.js"></script>
 </body>
+
 </html>
-  
- 
- 
-
-
- 
