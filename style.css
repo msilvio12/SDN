@@ -8,7 +8,7 @@
 
 /* Color base */
 body {
-  background-color: #f7f5f0;
+  background-color:rgb(116, 46, 35);
   color: #333;
   font-size: 16px;
   line-height: 1.6;
@@ -34,8 +34,9 @@ header h1 {
 /* Navegación */
 nav {
   display: flex;
+  font-family: 'Poppins', sans-serif;
   justify-content: center;
-  background-color: #ffe0cc;
+  background-color: #0a0a0a ;
   padding: 1rem 0;
   flex-wrap: wrap;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -44,7 +45,7 @@ nav {
 nav a {
   margin: 0.5rem 1rem;
   text-decoration: none;
-  color: #333;
+  color: #bebaba;
   font-weight: 600;
   text-transform: uppercase;
   transition: color 0.3s ease-in-out;
@@ -156,6 +157,7 @@ nav a:hover {
 
 .modal-contenido {
   background-color: white;
+  font-family: 'Poppins', sans-serif;
   margin: 5% auto;
   padding: 2rem;
   width: 80%;
@@ -191,7 +193,7 @@ nav a:hover {
 /* Carriles de comentarios */
 .comentarios-slider {
   padding: 3rem 1rem;
-  background-color: #fff8f0;
+  background-color: #bebaba;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
@@ -205,13 +207,18 @@ nav a:hover {
 .slider-contenedor {
   display: flex;
   gap: 2rem;
-  animation: deslizar 25s linear infinite;
-  justify-content: center;
+  animation: deslizar 60s linear infinite; /* Velocidad ajustada */
   width: max-content;
 }
 
+.slider-contenedor:hover {
+  animation-play-state: paused;
+}
+
+
 .comentario {
   background-color: #ffe0cc;
+  font-family: 'Poppins', sans-serif;
   border-radius: 8px;
   padding: 1rem 2rem;
   white-space: nowrap;
@@ -289,12 +296,12 @@ nav a:hover {
 .slider-contenedor {
   display: flex;
   gap: 2rem;
-  animation: deslizar 120s linear infinite; /* 🐢 Animación más lenta */
+  animation: deslizar 120s linear infinite; /* Animación más lenta */
   width: max-content;
 }
 
 .slider-contenedor:hover {
-  animation-play-state: paused; /* ✋ Se detiene al pasar el mouse */
+  animation-play-state: paused; /* Se detiene al pasar el mouse */
 }
 
 /* Estilo común para todos los botones */
@@ -529,4 +536,33 @@ h1.encabezado-principal { color: #ff914d; }
   margin: 0;
   padding: 0.5rem 0;
   color: #333;
+}
+
+#contador-local p strong {
+  color: #bebaba;
+}
+
+.visitas-contador {
+  color: #bebaba;
+}
+
+#contador-local p {
+  color: #bebaba;
+}
+
+#visitas {
+  color: #bebaba;
+  font-weight: bold;
+}
+/*color de titulo de video*/
+#videos h2 {
+  color: #bebaba; /* Cambiá este valor por el color que prefieras */
+}
+
+.comentarios-slider h2 {
+  color: #000000; /* Título en negro */
+}
+
+.comentario {
+  color: #000000; /* Comentarios en negro */
 }
