@@ -296,7 +296,7 @@ nav a:hover {
 .slider-contenedor {
   display: flex;
   gap: 2rem;
-  animation: deslizar 120s linear infinite; /* Animación más lenta */
+  animation: deslizar 60s linear infinite; /* Animación más lenta */
   width: max-content;
 }
 
@@ -393,7 +393,7 @@ video {
 }
 
 .chat-bot button {
-  background-color: #25D366; /* Color verde (puedes cambiarlo) */
+  background-color: #0a0a0a; /* */
   color: white;
   padding: 15px;
   border-radius: 50%;
